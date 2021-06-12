@@ -225,8 +225,8 @@ puts palindrome?('bootcamp') # => false
 def to_initials(name)
   new_name = name.split
   str = ''
-  new_name.each do |name|
-    str += name[0]
+  new_name.each do |nam|
+    str += nam[0]
   end
   str
 end
