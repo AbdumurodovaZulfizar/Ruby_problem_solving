@@ -186,3 +186,16 @@ end
 
 puts factorial(3) # => 6, because 1 * 2 * 3 = 6
 puts factorial(5) # => 120, because 1 * 2 * 3 * 4 * 5 = 120
+# 14---
+# Write a method reverse(word) that takes in a string word and returns the word with its letters in reverse order.
+def reverse(word)
+  i=word.length
+  while i>=0
+    print word[i]
+    i-=1
+  end
+end
+  
+puts reverse("cat")          # => "tac"
+puts reverse("programming")  # => "gnimmargorp"
+puts reverse("bootcamp")     # => "pmactoob"
