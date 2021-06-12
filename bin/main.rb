@@ -244,3 +244,31 @@ end
 
 puts first_in_array(["a", "b", "c", "d"], "d", "b"); # => "b"
 puts first_in_array(["cat", "bird" ,"dog", "mouse" ], "dog", "mouse"); # => "dog"
+# 18---
+# Write a method abbreviate_sentence that takes in a sentence string and returns a new sentence where every word longer than 4 characters has all of it's vowels removed.
+def abbreviate_sentence(sent)
+	new_arr=sent.split(" ")
+  	arr = []
+  	new_arr.each do |word|
+      if word.length>4
+        new_word=abbr_word(word)
+        arr<<new_word
+      else
+        arr<<word
+      end
+    end
+  return arr.join(" ")
+end
+def abbr_word(word)
+  vovels = 'eaiou'
+  new_word=''
+  word.each_char do |ele|
+    if !vovels.include?(ele)
+      new_word+=ele
+    end
+  end
+  return new_word
+end
+
+puts abbreviate_sentence("follow the yellow brick road") # => "fllw the yllw brck road"
+puts abbreviate_sentence("what a wonderful life")        # => "what a wndrfl life"
