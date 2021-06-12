@@ -218,3 +218,17 @@ end
 puts is_palindrome("racecar")  # => true
 puts is_palindrome("kayak")    # => true
 puts is_palindrome("bootcamp") # => false
+# 16---
+# Write a method to_initials that takes in a person's name string and returns a string representing their initials.
+def to_initials(name)
+	new_name = name.split(' ')
+  	str=''
+  new_name.each do |name|
+    str+=name[0]
+  end
+  return str
+end
+
+puts to_initials("Kelvin Bridges")      # => "KB"
+puts to_initials("Michaela Yamamoto")   # => "MY"
+puts to_initials("Mary La Grange")      # => "MLG"
