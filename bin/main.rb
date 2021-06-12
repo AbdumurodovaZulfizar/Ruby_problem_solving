@@ -199,3 +199,22 @@ end
 puts reverse("cat")          # => "tac"
 puts reverse("programming")  # => "gnimmargorp"
 puts reverse("bootcamp")     # => "pmactoob"
+# 15---
+# Write a method is_palindrome(word) that takes in a string word and returns the true if the word is a palindrome, false otherwise. A palindrome is a word that is spelled the same forwards and backwards.
+def is_palindrome(word)
+	i=word.length
+  	reverse = ''
+  	while i>=0
+      reverse += word[i].to_s
+      i-=1
+    end
+  	if reverse == word
+      return true
+    else
+      false
+    end
+end
+
+puts is_palindrome("racecar")  # => true
+puts is_palindrome("kayak")    # => true
+puts is_palindrome("bootcamp") # => false
